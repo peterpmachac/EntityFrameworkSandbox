@@ -1,0 +1,24 @@
+﻿https://www.linkedin.com/learning/introducing-entity-framework/asp-dot-net-core-web-apps-with-ef-core?autoAdvance=true&autoSkip=true&autoplay=true&resume=false
+
+Create Migration
+
+open "Package Manager Console"
+command: "Add-Migration InitialCreate"
+inspect generated file
+command: "Update-Database"
+
+
+Edit Migration
+
+open "Package Manager Console"
+command: "Add-Migration ** Name **"
+inspect generated file
+command: "Update-Database"
+
+
+Create context from existing database
+
+command: "Scaffold-DbContext "data source=localhost;trusted_connection=true;initial catalog=ContosoPets;integrated security=True;ConnectRetryCount=0" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Context ContosoPets2Context"
+OR with Annotations
+command: "Scaffold-DbContext "data source=localhost;trusted_connection=true;initial catalog=ContosoPets;integrated security=True;ConnectRetryCount=0" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Context ContosoPets2Context -DataAnnotations"
+
